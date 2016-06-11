@@ -2,7 +2,9 @@
 
 import UIKit
 
-class {{ module_info.name }}Configurator {
+class {{ module_info.name }}Configurator: ConfiguratorProtocol {
+
+    weak var flowController: FlowControllerProtocol?
 
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
         if let viewController = viewInput as? {{ module_info.name }}ViewController {
@@ -12,6 +14,7 @@ class {{ module_info.name }}Configurator {
 
     private func configure(viewController: {{ module_info.name }}ViewController) {
         let router = {{ module_info.name }}Router()
+        router.flowController = flowController
 
         let presenter = {{ module_info.name }}Presenter()
         presenter.view = viewController
