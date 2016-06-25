@@ -2,17 +2,23 @@
 
 import UIKit
 
-class {{ module_info.name }}ViewController: ParentViewController, {{module_info.name}}ViewInput {
+class {{ module_info.name }}ViewController: ParentViewController {
 
     var output: {{ module_info.name }}ViewOutput!
 
     // MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
 
-    // MARK: - {{module_info.name}}ViewInput
+}
+
+// MARK: - {{module_info.name}}ViewInput
+
+extension {{ module_info.name }}ViewController: {{module_info.name}}ViewInput {
+
     func setupInitialState() {
 
     }

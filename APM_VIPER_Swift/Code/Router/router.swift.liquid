@@ -1,7 +1,13 @@
 {% include 'header' %}
 
-class {{ module_info.name }}Router: {{ module_info.name }}RouterInput {
+class {{ module_info.name }}Router {
 
     var flowController: FlowControllerProtocol?
+
+}
+
+// MARK: - {{ module_info.name }}RouterInput
+
+extension {{ module_info.name }}Router: {{ module_info.name }}RouterInput {
 
 }
