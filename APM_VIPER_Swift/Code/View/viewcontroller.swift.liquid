@@ -4,10 +4,19 @@ import UIKit
 
 class {{ module_info.name }}ViewController: ParentViewController {
 
-    var output: {{ module_info.name }}ViewOutput!
+    var output: {{ module_info.name }}ViewOutput
 
     // MARK: - Life cycle
 
+    required init(coder aDecoder: NSCoder) {
+        fatalError("NSCoding not supported")
+    }
+
+    init(output: {{ module_info.name }}ViewOutput) {
+        self.output = output
+        super.init(nibName: nil, bundle: nil)
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
