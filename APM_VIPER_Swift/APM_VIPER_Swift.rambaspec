@@ -18,7 +18,7 @@ code_files:
 - {name: Interactor/InteractorOutput.swift, path: Code/Interactor/interactor_output.swift.liquid}
 
 # Presenter layer
-- {name: Presenter/ModuleInput.swift, path: Code/Presenter/module_input.swift.liquid}
+- {name: Presenter/ModuleDelegate.swift, path: Code/Presenter/module_delegate.swift.liquid}
 - {name: Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
 
 # Router layer
