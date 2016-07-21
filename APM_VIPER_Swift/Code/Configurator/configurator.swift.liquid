@@ -16,7 +16,7 @@ class {{ module_info.name }}Configurator: ConfiguratorProtocol {
         let interactor = {{ module_info.name }}Interactor()
         interactor.output = presenter
 
-        let viewController = {{ module_info.name }}Controller(output: presenter)
+        let viewController = {{ module_info.name }}ViewController(output: presenter)
 
         presenter.interactor = interactor
         presenter.view = viewController
