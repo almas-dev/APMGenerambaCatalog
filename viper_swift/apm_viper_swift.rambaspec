@@ -1,8 +1,8 @@
 # Template information section
-name: APM_VIPER_Swift
+name: apm_viper_swift
 summary: Swift VIPER module template
 author: Alexander Maslennikov
-version: 0.1.0
+version: 0.2.0
 license: MIT
 
 
@@ -14,11 +14,10 @@ code_files:
 
 # Interactor layer
 - {name: Interactor/Interactor.swift, path: Code/Interactor/interactor.swift.liquid}
-- {name: Interactor/InteractorInput.swift, path: Code/Interactor/interactor_input.swift.liquid}
-- {name: Interactor/InteractorOutput.swift, path: Code/Interactor/interactor_output.swift.liquid}
+- {name: Interactor/InteractorInputOutput.swift, path: Code/Interactor/interactor_input_output.swift.liquid}
 
 # Presenter layer
-- {name: Presenter/ModuleDelegate.swift, path: Code/Presenter/module_delegate.swift.liquid}
+- {name: Presenter/ModuleInputOutput.swift, path: Code/Presenter/module_input_output.swift.liquid}
 - {name: Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
 
 # Router layer
@@ -27,8 +26,7 @@ code_files:
 
 # View layer
 - {name: View/ViewController.swift, path: Code/View/viewcontroller.swift.liquid}
-- {name: View/ViewInput.swift,  path: Code/View/view_input.swift.liquid}
-- {name: View/ViewOutput.swift, path: Code/View/view_output.swift.liquid}
+- {name: View/ViewInputOutput.swift,  path: Code/View/view_input_output.swift.liquid}
 
 
 # The declarations for test files
