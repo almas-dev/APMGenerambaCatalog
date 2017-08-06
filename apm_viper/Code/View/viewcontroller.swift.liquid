@@ -1,0 +1,32 @@
+{% include 'header' %}
+
+import UIKit
+
+class {{ module_info.name }}ViewController: ParentViewController {
+
+    var output: {{ module_info.name }}ViewOutput!
+
+    // MARK: - Life cycle
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("NSCoding not supported")
+    }
+
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        output.viewIsReady()
+    }
+}
+
+// MARK: - {{module_info.name}}ViewInput
+
+extension {{ module_info.name }}ViewController: {{module_info.name}}ViewInput {
+
+    func setupInitialState() {
+
+    }
+}

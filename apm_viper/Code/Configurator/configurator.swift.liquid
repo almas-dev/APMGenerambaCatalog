@@ -1,0 +1,29 @@
+{% include 'header' %}
+
+import UIKit
+
+class {{ module_info.name }}Configurator {
+
+    static let tag: String = "{{ module_info.name }}Tag"
+
+    var appRouter: AppRouterProtocol!
+
+    func configureModule() -> UIViewController {
+        let router = {{ module_info.name }}Router()
+        router.appRouter = appRouter
+
+        let presenter = {{ module_info.name }}Presenter()
+        presenter.router = router
+
+        let interactor = {{ module_info.name }}Interactor()
+        interactor.output = presenter
+
+        let viewController = {{ module_info.name }}ViewController()
+        viewController.output = presenter
+
+        presenter.interactor = interactor
+        presenter.view = viewController
+
+        return viewController
+    }
+}

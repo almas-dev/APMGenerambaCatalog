@@ -1,0 +1,48 @@
+# Template information section
+name: apm_viper
+summary: Swift VIPER module template
+author: Alexander Maslennikov
+version: 0.3.0
+license: MIT
+
+
+# The declarations for code files
+code_files:
+
+# Configurator
+- {name: Configurator/Configurator.swift, path: Code/Configurator/configurator.swift.liquid}
+
+# Interactor layer
+- {name: Interactor/Interactor.swift, path: Code/Interactor/interactor.swift.liquid}
+- {name: Interactor/InteractorInputOutput.swift, path: Code/Interactor/interactor_input_output.swift.liquid}
+
+# Presenter layer
+- {name: Presenter/ModuleInputOutput.swift, path: Code/Presenter/module_input_output.swift.liquid}
+- {name: Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
+
+# Router layer
+- {name: Router/Router.swift, path: Code/Router/router.swift.liquid}
+- {name: Router/RouterInput.swift, path: Code/Router/router_input.swift.liquid}
+
+# View layer
+- {name: View/ViewController.swift, path: Code/View/viewcontroller.swift.liquid}
+- {name: View/ViewInputOutput.swift,  path: Code/View/view_input_output.swift.liquid}
+
+
+# The declarations for test files
+test_files:
+
+# Configurators tests
+- {name: Configurator/ConfiguratorTests.swift, path: Tests/Configurator/configurator_tests.swift.liquid}
+
+# Interactor tests
+- {name: Interactor/InteractorTests.swift, path: Tests/Interactor/interactor_tests.swift.liquid}
+
+# Presenter tests
+- {name: Presenter/PresenterTests.swift, path: Tests/Presenter/presenter_tests.swift.liquid}
+
+# Router tests
+- {name: Router/RouterTests.swift, path: Tests/Router/router_tests.swift.liquid}
+
+# View tests
+- {name: View/ViewTests.swift, path: Tests/View/view_tests.swift.liquid}
